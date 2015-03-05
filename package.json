@@ -1,0 +1,30 @@
+{
+  "name": "node-ng",
+  "version": "0.0.2",
+  "description": "integration of angularjs style mvc, ie: services,controllers etc... for use in node command line / server apps",
+  "main": "nodular.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jstacoder/node-ng.git"
+  },
+  "keywords": [
+    "angular",
+    "mvc",
+    "nodejs"
+  ],
+  "author": "Kyle Roux <kyle@level2designs.com> (https://github.com/jstacoder)",
+  "license": "BSD3",
+  "bugs": {
+    "url": "https://github.com/jstacoder/node-ng/issues"
+  },
+    "dependencies":{
+         
+            "benv":"*"
+        }
+}

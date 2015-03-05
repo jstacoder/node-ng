@@ -17,16 +17,11 @@
 module.exports = function(){
     console.log(angular.version);
     /* load your modules by name here */
-    //var app = angular.module('testApp',['service.app','dice.factory.app','controllers-ng.app']);
+    // var app = angular.module('testApp',['service.app','factory.app','controller.app']);
 
     /* require module files here */
-    //require('./service.js');
-    //require('./factorys.js');
-    //require('./controllers-ng.js');
-    //require('./newdice.js');
-
-    //var rootScope = ng_load('$rootScope');
-    //var $interval = ng_load('$interval');
-    //var $timeout = ng_load('$timeout');
+    // require('./service.js');
+    // require('./factory.js');
+    // require('./controllers.js');
 };
 
