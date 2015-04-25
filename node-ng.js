@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 
 var get_mod = function(name){
