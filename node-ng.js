@@ -26,6 +26,9 @@ var use_angular = function(callback){
                 cache_mods(mods);
                 return angular.injector(mods).get(name);
             },
+            ng_bootstrap:function(app){
+                angular.bootstrap(document,[String(app)]);
+            },
             promisify:function(asyncFn,context){         
                 var $q = ng_load('$q');                
                 return function(){

@@ -1,6 +1,6 @@
 {
   "name": "node-ng",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "integration of angularjs style mvc, ie: services,controllers etc... for use in node command line / server apps",
   "main": "nodular.js",
   "directories": {
