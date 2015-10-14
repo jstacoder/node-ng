@@ -2,10 +2,10 @@
 'use strict';
 
 var get_mod = function(name){
-    return require('/root/.node/lib/node_modules/'+name);
+    return require(require('path').join(require('process').env['HOME'],'.node','lib','node_modules',name));
 };
 var get_benv = function(){
-    return get_mod('benv') || require('benv');
+    return require('benv');
 };
 var use_angular = function(callback){
     get_benv().setup(function(){
@@ -28,7 +28,14 @@ var use_angular = function(callback){
                 return angular.injector(mods).get(name);
             },
             ng_bootstrap:function(app){
-                angular.bootstrap(document,[String(app)]);
+                var _app = angular.isString(app) ? angular.module(app) : app;
+                _app.config(function($locationProvider){
+                    $locationProvider.html5Mode(false);
+                });
+                return angular.bootstrap(angular.element(document.createElement('body')),[_app.name]);
+            },
+            ng_injector:function(app){ 
+                return ng_bootstrap(app).invoke;
             },
             promisify:function(asyncFn,context){         
                 var $q = ng_load('$q');                

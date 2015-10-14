@@ -1,6 +1,6 @@
 {
   "name": "node-ng",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "integration of angularjs style mvc, ie: services,controllers etc... for use in node command line / server apps",
   "main": "nodular.js",
   "directories": {
@@ -25,6 +25,6 @@
   },
     "dependencies":{
          
-            "benv":"*"
+            "benv":"1.0.0"
         }
 }
