@@ -6,15 +6,16 @@ Node-Ng is now a full featured angular test environment. use any test runner you
 examples use tape test runner, but any can be used.
 
 run / test :
-    - controllers via `$controller` service
-    - services/factorys via `ng_injector` convience function
-    - directives via `$compile` service
-    - emulate `$scope.$digest` by simply getting `$rootScope` and calling its `$digest` function
+    - controllers via `$controller` service  
+    - services/factorys via `ng_injector` convience function  
+    - directives via `$compile` service   
+    - emulate `$scope.$digest` by simply getting `$rootScope` and calling its `$digest` function  
 
-convience functions included:
-    * `ng_load(name)` - replacement for angular.inject(name,[appName])
-    * `ng_bootstrap(app)` - boostraps angular app for use
-    * `ng_injector(app)` - returns injector function for use in testing, ie:
+
+convience functions included:  
+    * `ng_load(name)` - replacement for angular.inject(name,[appName])  
+    * `ng_bootstrap(app)` - boostraps angular app for use  
+    * `ng_injector(app)` - returns injector function for use in testing, ie:  
     
     ```nodejs
     var injector = ng_injector('app');
