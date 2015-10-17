@@ -1,6 +1,6 @@
 {
   "name": "node-ng",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "integration of angularjs style mvc, ie: services,controllers etc... for use in node command line / server apps",
   "main": "nodular.js",
   "directories": {
@@ -23,8 +23,11 @@
   "bugs": {
     "url": "https://github.com/jstacoder/node-ng/issues"
   },
-    "dependencies":{
-         
-            "benv":"1.0.0"
-        }
+  "dependencies": {
+    "benv": "1.0.0",
+    "tap": "^2.1.1",
+    "tap-prettify": "0.0.2",
+    "tape": "^4.2.1",
+    "jsdom":"^6.5.1"
+  }
 }
