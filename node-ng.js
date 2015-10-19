@@ -33,7 +33,7 @@ var use_angular = function(callback){
                 _app.config(function($locationProvider){
                     $locationProvider.html5Mode(false);
                 });
-                return angular.bootstrap(angular.element(document.body || document.createElement('body')),[_app.name]);
+                return angular.bootstrap(angular.element(document.createElement('body')),[_app.name]);
             },
             ng_injector:function(app){ 
                 return ng_bootstrap(app).invoke;
