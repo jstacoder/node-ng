@@ -8,9 +8,10 @@ var get_benv = function(){
     return require('benv');
 };
 var use_angular = function(callback){
-    get_benv().setup(function(){
-        get_benv().expose({        
-            angular:get_benv().require('./angular.js','angular'),
+    var benv = get_benv();
+    benv.setup(function(){
+        benv.expose({        
+            angular:benv,require('./angular.js','angular'),
             ng_mod_cache:[],
             cache_mods:function(mods){
                 angular.forEach(mods,function(itm){
@@ -32,7 +33,7 @@ var use_angular = function(callback){
                 _app.config(function($locationProvider){
                     $locationProvider.html5Mode(false);
                 });
-                return angular.bootstrap(angular.element(document.createElement('body')),[_app.name]);
+                return angular.bootstrap(angular.element(document.body || document.createElement('body')),[_app.name]);
             },
             ng_injector:function(app){ 
                 return ng_bootstrap(app).invoke;
@@ -44,9 +45,10 @@ var use_angular = function(callback){
                     args = Array.prototype.slice.call(arguments);        
                     args.push(function(err,val){
                         if(err !== null){
-                            return defer.reject(err);
+                            defer.reject(err);
+                        }else{
+                            defer.resolve(val);
                         }
-                        return defer.resolve(val);
                     });
                     asyncFn.apply(context || {}, args);        
                     return defer.promise;
