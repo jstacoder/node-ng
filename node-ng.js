@@ -11,7 +11,7 @@ var use_angular = function(callback){
     var benv = get_benv();
     benv.setup(function(){
         benv.expose({        
-            angular:benv,require('./angular.js','angular'),
+            angular:benv.require('./angular.js','angular'),
             ng_mod_cache:[],
             cache_mods:function(mods){
                 angular.forEach(mods,function(itm){
