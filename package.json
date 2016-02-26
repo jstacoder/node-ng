@@ -1,13 +1,13 @@
 {
   "name": "node-ng",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "integration of angularjs style mvc, ie: services,controllers etc... for use in node command line / server apps",
   "main": "nodular.js",
   "directories": {
     "example": "examples"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha mtest.js"
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,9 @@
     "tap": "^2.1.1",
     "tap-prettify": "0.0.2",
     "tape": "^4.2.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
   }
 }
